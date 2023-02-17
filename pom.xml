@@ -49,6 +49,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.google.code.simple-spring-memcached</groupId>
+			<artifactId>xmemcached-provider</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+		<!-- Force XMemcached to version 2.4.3 simple-spring-memcached uses 2.4.0 -->
+		<dependency>
+			<groupId>com.googlecode.xmemcached</groupId>
+			<artifactId>xmemcached</artifactId>
+			<version>2.4.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>

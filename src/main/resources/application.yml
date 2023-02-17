@@ -19,3 +19,9 @@ spring:
   sql:
     init:
       mode: always
+
+memcache:
+  config:
+    server: localhost:11211
+    username:
+    password:

@@ -37,8 +37,6 @@ public class MemCachedTest {
         log("==> Key:Crunchify deleted successfully\n");
 
         assertEquals(null, memcachedClient.get("Crunchify"));
-
-
     }
 
     private void log(Object object) {

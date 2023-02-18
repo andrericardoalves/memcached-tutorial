@@ -1,8 +1,11 @@
 package com.alves.service;
 
 import com.alves.model.Task;
-import com.alves.repository.TaskRepository;
+
+import java.util.List;
+import java.util.Optional;
 
 public interface TaskService {
 
+    Optional<List<Task>> findAllByOrderByNameAsc();
 }

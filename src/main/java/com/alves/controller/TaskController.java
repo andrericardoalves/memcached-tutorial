@@ -20,7 +20,7 @@ public class TaskController {
 
     @GetMapping("/findAll")
     public ResponseEntity<List<Task>> findAll(){
-        return ResponseEntity.ok(repository.findAll());
+        return ResponseEntity.ok(repository.findAllByOrderByNameAsc().get());
     }
 
     @PostMapping("/save")

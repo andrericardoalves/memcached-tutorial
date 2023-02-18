@@ -5,4 +5,7 @@ services:
    command: ["-m", "4096"]
    ports:
     - "11211:11211"
+   environment:
+     - MEMCACHED_USERNAME=admin
+     - MEMCACHED_PASSWORD=admin123
    restart: always

@@ -20,8 +20,9 @@ spring:
     init:
       mode: always
 
-memcache:
+memcached:
   config:
-    server: localhost:11211
-    username:
-    password:
+    server: localhost
+    port: 11211
+    username: admin
+    password: admin123

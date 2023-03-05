@@ -8,4 +8,7 @@ import java.util.Optional;
 public interface TaskService {
 
     Optional<List<Task>> findAllByOrderByNameAsc();
+    Task save(Task task);
+    void deleteById(Integer id);
+
 }

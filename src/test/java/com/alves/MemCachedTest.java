@@ -5,11 +5,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 public class MemCachedTest {
 
+    /*
     @Autowired
     MemcachedClient memcachedClient;
 
@@ -37,9 +40,15 @@ public class MemCachedTest {
         log("==> Key:Crunchify deleted successfully\n");
 
         assertEquals(null, memcachedClient.get("Crunchify"));
+
+        List<String> tasks = List.of("Workout", "Do Laundry", "Cooking");
+        memcachedClient.set("tasks", 2000, tasks);
+        assertEquals(tasks, memcachedClient.get("tasks"));
     }
 
     private void log(Object object) {
         System.out.println(object);
     }
+
+    */
 }

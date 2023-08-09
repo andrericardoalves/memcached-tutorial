@@ -9,6 +9,11 @@ public interface TaskService {
 
     Optional<List<Task>> findAllByOrderByNameAsc();
     Task save(Task task);
+
+    Optional<Task> findById(Integer id);
+
+    void update(Integer id, Task task);
+
     void deleteById(Integer id);
 
 }

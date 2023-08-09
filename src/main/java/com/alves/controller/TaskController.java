@@ -28,6 +28,13 @@ public class TaskController {
         return ResponseEntity.ok(service.save(task));
     }
 
+    @PutMapping("update/{id}")
+    public ResponseEntity<?> update(@PathVariable("id") Integer id, @RequestBody Task task){
+        service.update(id, task);
+        return ResponseEntity.noContent().build();
+    }
+
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> delete(@PathVariable("id") Integer id){
         service.deleteById(id);

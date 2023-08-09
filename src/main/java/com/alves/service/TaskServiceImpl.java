@@ -31,6 +31,24 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
+    public Optional<Task> findById(Integer id) {
+        return repository.findById(id);
+    }
+
+
+    @Override
+    @CachePut(value = "taskCached", key = "#id")
+    public void update(Integer id, Task task) {
+        Optional<Task> taskFound = findById(id);
+
+        if(taskFound.isPresent()){
+            Task taskObj = taskFound.get();
+            taskObj.setName(task.getName());
+            save(taskObj);
+        }
+    }
+
+    @Override
     @CacheEvict(value ="taskCached", allEntries = true)
     public void deleteById(Integer id) {
         repository.deleteById(id);
